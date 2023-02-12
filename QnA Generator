@@ -3,7 +3,13 @@ pip install openai
 import os
 import openai
 
+# Input text from user
+# Hardcoded here to p
 p = """The shoes had been there for as long as anyone could remember. In fact, it was difficult for anyone to come up with a date they had first appeared. It had seemed theyd always been there and yet they seemed so out of place. Why nobody had removed them was a question that had been asked time and again, but while they all thought it, nobody had ever found the energy to actually do it. So, the shoes remained on the steps, out of place in one sense, but perfectly normal in another."""
+
+
+# Response is the request to generate questions
+# Hardcoded
 
 response = openai.Completion.create(
   model="text-davinci-003",
@@ -15,5 +21,6 @@ response = openai.Completion.create(
   presence_penalty=1
 )
 
+# Printing the response from OpenAI
 a = response.choices[0].text
 print(a)
